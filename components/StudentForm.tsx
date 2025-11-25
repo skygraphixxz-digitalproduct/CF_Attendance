@@ -126,7 +126,7 @@ const StudentForm: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-purple-600"></div>
         
         <header className="mb-6 text-center">
-          <h1 className="text-3xl font-bold text-slate-800 tracking-tight">AttenSync</h1>
+          <h1 className="text-3xl font-bold text-slate-800 tracking-tight">Club Fair Attendance</h1>
           <p className="text-slate-500 mt-2">Mark your daily attendance instantly.</p>
         </header>
 
@@ -243,56 +243,4 @@ const StudentForm: React.FC = () => {
                   name="department"
                   value={formData.department}
                   onChange={handleInputChange}
-                  className="w-full pl-9 pr-3 py-2 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none appearance-none transition-all text-sm"
-                >
-                  <option value="" disabled>Select</option>
-                  {DEPARTMENTS.map(dept => (
-                    <option key={dept} value={dept}>{dept}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-500 uppercase tracking-wider ml-1">Gender</label>
-              <div className="relative">
-                <select
-                  name="gender"
-                  value={formData.gender}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-2 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none appearance-none transition-all text-sm"
-                >
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl shadow-lg transform active:scale-95 transition-all flex items-center justify-center gap-2 mt-4"
-          >
-            <CheckCircle className="w-5 h-5" />
-            Submit Attendance
-          </button>
-        </form>
-
-        <div className="mt-6 pt-4 border-t border-slate-200 text-center">
-          <button 
-            onClick={() => setShowLogin(true)}
-            className="text-sm text-slate-500 hover:text-blue-600 flex items-center justify-center gap-1 mx-auto transition-colors"
-          >
-            <KeyRound className="w-3 h-3" />
-            Admin Access
-          </button>
-        </div>
-      </div>
-
-      <LoginModal isOpen={showLogin} onClose={() => setShowLogin(false)} />
-    </div>
-  );
-};
-
-export default StudentForm;
+                  className="w-full pl-9 pr-3 py-2 bg-white border border-slate-200 rounded-lg focus:ring-
