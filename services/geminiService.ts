@@ -1,9 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Student } from "../types";
 
-const GEMINI_API_KEY = process.env.API_KEY || '';
-
-const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 // Helper to convert file to base64
 export const fileToGenerativePart = async (file: File): Promise<{ inlineData: { data: string; mimeType: string } }> => {
@@ -26,10 +24,6 @@ export const fileToGenerativePart = async (file: File): Promise<{ inlineData: { 
 };
 
 export const extractStudentData = async (imageFile: File): Promise<Partial<Student>> => {
-  if (!GEMINI_API_KEY) {
-    throw new Error("Gemini API Key is missing. Please check your environment variables.");
-  }
-
   try {
     const imagePart = await fileToGenerativePart(imageFile);
 

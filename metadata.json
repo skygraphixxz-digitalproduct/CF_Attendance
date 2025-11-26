@@ -1,5 +1,7 @@
 {
   "name": "Club Fair Attendance",
   "description": "A modern, AI-powered student attendance tracking application with a public submission form and a secure admin dashboard.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [
+    "geolocation"
+  ]
 }

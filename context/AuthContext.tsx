@@ -5,7 +5,7 @@ import useLocalStorage from '../hooks/useLocalStorage';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const AuthProvider = ({ children }: { children: ReactNode }) => {
+export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useLocalStorage<User | null>('attenSync_user', null);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 

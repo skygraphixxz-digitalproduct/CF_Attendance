@@ -7,6 +7,7 @@ export interface Student {
   dob: string;
   email: string;
   timestamp: string; // ISO string
+  attendanceStatus: 'Present' | 'Absent';
 }
 
 export interface User {
@@ -22,11 +23,12 @@ export interface AuthContextType {
 }
 
 export enum Department {
-  CS = 'Computer Science',
-  ENG = 'Engineering',
-  ARTS = 'Arts & Humanities',
-  SCI = 'Sciences',
-  BUS = 'Business'
+  BSIT = 'BSIT',
+  BSHM = 'BSHM',
+  BSTM = 'BSTM',
+  BSBA = 'BSBA',
+  BTVTED = 'BTVTED'
+
 }
 
 export interface AttendanceStats {
